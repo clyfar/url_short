@@ -14,9 +14,10 @@ from hash_lib import HashBuilder
 from validate_email import validate_email
 from werkzeug.routing import BaseConverter
 
+# For DD monitoring
 options = {
-    'api_key':'59b079536c746acf32583e049265791e',
-    'app_key':'9cd55dfd35599735baf57f3e43078fa62bd9bed7'
+    'api_key':'xxx',
+    'app_key':'xxx'
 }
 
 initialize(**options)

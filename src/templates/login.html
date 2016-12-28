@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+{% block body %}
+  <h2>Login</h2>
+  {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('login') }}" method="post">
+    <div>
+      <div class="inputwrap">
+        <label>Username</label>
+        <input class="aligned" required title="username is required"
+         type="text" name="username">
+      </div>
+      <div class="inputwrap">
+        <label>Password</label>
+        <input class="aligned" required title="password is required"
+         type="password" name="password">
+      </div>
+      <div>
+        <input class="button" type="submit" value="Login">
+      </div>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "header.html" %}
+{% block body %}
+  <h2>Signup</h2>
+  {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('signup') }}" method="post">
+    <div>
+      <div class="inputwrap">
+        <label>Fullname</label>
+        <input class="aligned" required title="Full name is required"
+         type="text" name="fullname">
+      </div>
+      <div class="inputwrap">
+        <label>Email</label>
+        <input class="aligned" required title="Valid email address is required"
+         type="text" name="email">
+      </div>
+      <div class="inputwrap">
+        <label>Username</label>
+        <input class="aligned" required title="username is required"
+         type="text" name="username">
+      </div>
+      <div class="inputwrap">
+        <label>Password</label>
+        <input class="aligned" required title="password is required"
+         type="password" name="password" id="password">
+      </div>
+      <div class="inputwrap">
+        <label>Password2</label>
+        <input class="aligned" required title="password is required"
+         type="password" onkeyup="checkPass(); return false;"
+         name="password2" id="password2">
+        <span id="confirmMessage" class="confirmMessage"></span> 
+      </div>
+      <div>
+        <input class="button" type="submit" value="Signup" id="sbutton"
+         disabled>
+      </div>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "header.html" %}
+{% block body %}
+{% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+ <form action="{{ url_for('add_entry') }}" method="post" class="add-entry">
+   <div>
+    <div class="inputwrap">
+        <label>URL</label>
+        <input class="aligned" required title="URL is required"
+         name="url" type="text" />
+    </div>
+    <div class="inputwrap">
+        <label>Short Text</label>
+        <input class="aligned" name="short_name" type="text" />
+        (Leave blank to generate hash)
+        <br/>
+    </div>
+    <div>
+      <input class="button" type="submit" value="Create Shortie" onclick="document.forms[0].submit()"/>
+    </div>
+  </div>
+</div>
+</form>
+</form>
+<div>
+ <ul class="entries">
+ <h2>Your shorties:</h2>
+ {% for short in shorties %}
+   <li><h3>{{ short.url }}</h3>
+     <a href="http://k:8000/{{ short.key }}">k/{{short.key}}</a>
+     - {{ short.owner }} <br />
+     <input id="{{ short.key }}" value="http://k:8000/{{ short.key }}" />
+     <button class="button" id="copy-button" data-clipboard-target="#{{ short.key }}">Copy</button>
+ {% else %}
+   <li><em>No shorties so far.</em>
+ {% endfor %}
+ </ul>
+</div>
+<script>
+  (function(){
+    new Clipboard('#copy-button');
+})();
+</script>
+{% endblock %}

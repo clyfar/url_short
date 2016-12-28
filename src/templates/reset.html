@@ -1,0 +1,25 @@
+ {% extends "header.html" %}
+ {% block body %}
+   <h2>Password Reset</h2>
+   {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+   <form action="{{ url_for('reset-password') }}" method="post">
+     <div>
+       <div class="inputwrap">
+         <label>Password</label>
+         <input class="aligned" required title="password is required"
+          type="password" name="password" id="password">
+       </div>
+       <div class="inputwrap">
+         <label>Password2</label>
+         <input class="aligned" required title="password is required"
+          type="password" onkeyup="checkPass(); return false;"
+          name="password2" id="password2">
+         <span id="confirmMessage" class="confirmMessage"></span>
+       </div>
+       <div>
+         <input class="button" type="submit" value="reset" id="sbutton"
+          disabled>
+       </div>
+     </div>
+   </form>
+ {% endblock %}

@@ -1,0 +1,84 @@
+html {
+  margin: 0;
+  padding: 10;
+}
+
+body { 
+  font: georgia, sans-serif;
+  line-height: 1.8;
+  color: #555753; 
+  background: #fff; 
+  margin: 0; 
+  padding: 20px;
+}
+
+p { 
+  margin-top: 0; 
+  text-align: justify;
+}
+
+h3 { 
+  font: italic normal 1.1em georgia, sans-serif;
+  letter-spacing: 1px; 
+  margin-bottom: 0; 
+  color: #7D775C;
+}
+
+a:link { 
+  font-weight: bold; 
+  text-decoration: none; 
+  color: #999;
+}
+
+a:visited { 
+  font-weight: bold; 
+  text-decoration: none; 
+  color: #666;
+}
+
+a:hover, a:focus, a:active { 
+  text-decoration: underline; 
+  color: #333;
+}
+
+input.aligned {
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  display: inline-block;
+  width: 350px;
+  padding: 10px;
+  margin: 10px;
+}
+
+input.button {
+  border: 1px solid #ccc;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: 25px;
+  font: bold normal 1.0em georgia;
+  color: #FFF;
+  background-color: #7D775C;
+}
+
+.inputwrap label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.metanav {
+  background-repeat: no-repeat;
+  text-align: right;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  font-size: 1.2em;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+  margin-right: 1.5em;
+  background: #D8D6CE url(atl.site.logo) no-repeat 2px;
+}

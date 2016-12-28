@@ -1,0 +1,4 @@
+Copy the Dockerfile into the directory just below shorties. 
+docker build .
+docker run --expose=8000 -p 8000:8000 -i <name of the image docker built>
+navigate to http://localhost:8000

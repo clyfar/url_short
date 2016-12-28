@@ -1,0 +1,52 @@
+<!doctype html>
+<script>
+// Mostly stolen from some javascript website out there.
+// Thanks, whoever you were.
+function checkPass() {
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('password');
+    var pass2 = document.getElementById('password2');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match!"
+        var sb = document.getElementById('sbutton');
+        sb.disabled = false;
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+        var sb = document.getElementById('sbutton');
+        sb.disabled = true;
+    }
+}
+
+</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+
+<title>Katch Shorties</title>
+<link rel="stylesheet" type="text/css"
+ href="{{ url_for('static', filename='short.css') }}">
+  <div class="metanav">
+  {% if not session.logged_in %}
+    <a href="{{ url_for('login') }}">log in</a> | 
+    <a href="{{ url_for('signup') }}">signup</a>
+  {% else %}
+    <a href="{{ url_for('show_shorties') }}">shorties</a> | 
+    <a href="{{ url_for('logout') }}">log out</a>
+  {% endif %}
+  </div>
+  {% block body %}{% endblock %}

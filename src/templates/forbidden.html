@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='short.css') }}" type="text/css">
+{% block body %}
+  <h2>Forbidden</h2>
+  {% if error %}<p class="error"><strong>Error:</strong> {{ error }}{% endif %}
+{% endblock %}

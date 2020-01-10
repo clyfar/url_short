@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Author: Geoffrey Golliher (ggolliher@katch.com)
+# Author: Geoffrey Golliher (brokenway@gmail.com)
 
 from sqlite3 import dbapi2 as sqlite3
 from abc_driver import AbstractDBDriver

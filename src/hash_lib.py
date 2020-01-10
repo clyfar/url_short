@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Author: Geoffrey Golliher (ggolliher@katch.com)
+# Author: Geoffrey Golliher (brokenway@gmail.com)
 
 import string
 
@@ -80,3 +80,9 @@ class HashBuilder(object):
         for i, c in enumerate(reversed(x)):
             result += self.alphabet.index(c) * (n ** i)
         return result
+    
+    def mi_encode(self, x):
+        return x * 1162261467 % 4000000000000
+
+    def mi_decode(self, x):
+        return x * 2851837726803 % 4000000000000

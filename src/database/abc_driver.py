@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Author: Geoffrey Golliher (ggolliher@katch.com)
+# Author: Geoffrey Golliher (brokenway@gmail.com)
 
 from abc import ABCMeta, abstractmethod
 

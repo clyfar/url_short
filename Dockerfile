@@ -2,7 +2,7 @@
 # For production don't set a port, let docker pick one.
 
 FROM ubuntu:14.04
-MAINTAINER Geoffrey Golliher <ggolliher@katch.com>
+MAINTAINER Geoffrey Golliher <brokenway@gmail.com>
 
 LABEL Description="This image is used to start the Katch url shortener service."
 

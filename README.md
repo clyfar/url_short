@@ -1,2 +1,2 @@
 # shorties
-A Katch url shortening service
+A braindead simple url shortening service
